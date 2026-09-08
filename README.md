@@ -6,7 +6,7 @@ Nova AI Automation is a frontend project focused on modern UI design, responsive
 
 ## Live Demo 
 
-[View CineVerse Live Demo](https://nova-ai-automation.netlify.app/)
+[View Nova Ai Automation Live Demo](https://nova-ai-automation.netlify.app/)
 
 ## 📸 Screenshots
 
