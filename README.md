@@ -5,8 +5,8 @@ A modern and fully responsive AI SaaS landing page built with HTML5, Modern CSS3
 Nova AI Automation is a frontend project focused on modern UI design, responsive layouts, interactive components, and creating a realistic SaaS product experience
 
 ## Live Demo 
-Nova AI Automation — SaaS Landing Page
-https://nova-ai-automation.netlify.app/
+
+[View CineVerse Live Demo](https://nova-ai-automation.netlify.app/)
 
 ## 📸 Screenshots
 
