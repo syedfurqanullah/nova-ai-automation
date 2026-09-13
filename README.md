@@ -12,23 +12,23 @@ Nova AI Automation is a frontend project focused on modern UI design, responsive
 
 ### Dashboard
 
-![Nova Ai Dashboard](./screenshots/dashboard.png)
+![Nova Ai Dashboard](./assets/screenshots/dashboard.png)
 
 ### Features
 
-![Nova AI Features](./screenshots/features.png)
+![Nova AI Features](./assets/screenshots/features.png)
 
 ### How It Works
 
-![Nova AI How It Works](./screenshots/how%20its%20work.png)
+![Nova AI How It Works](./assets/screenshots/how%20its%20work.png)
 
 ### Pricing
 
-![Nova AI Pricing](./screenshots/pricing.png)
+![Nova AI Pricing](./assets/screenshots/pricing.png)
 
 ### Responsive
 
-![Nova AI Responsive](./screenshots/responsive.png)
+![Nova AI Responsive](./assets/screenshots/responsive.png)
 
 ## Features
 
@@ -50,12 +50,25 @@ Nova AI Automation is a frontend project focused on modern UI design, responsive
 ## Project Structure
 
 ```text
-index.html
-style.css
-script.js
-screenshots/
-assets/
-README.md
+nova-ai-automation/
+├── index.html
+├── css/
+│   ├── main.css
+│   ├── variables.css
+│   └── responsive.css
+├── js/
+│   ├── main.js
+│   ├── auth.js
+│   ├── pricing.js
+│   ├── checkout.js
+│   └── chatbot.js
+├── assets/
+│   ├── images/
+│   ├── icons/
+│   └── fonts/
+├── screenshots/
+├── README.md
+└── .gitignore
 ```
 
 ## Run Locally

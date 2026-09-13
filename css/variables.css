@@ -1,0 +1,18 @@
+/* Design tokens shared by every NovaAI component. */
+:root {
+  /* Color palette */
+  --ink: #15172c;
+  --muted: #626981;
+  --brand: #635bff;
+  --brand-deep: #4841d4;
+  --soft: #f8f8fd;
+  --line: #e7e7f1;
+  --surface: #ffffff;
+
+  /* Layout & dimensions */
+  --container: 1160px;
+  --radius: 22px;
+
+  /* Effects */
+  --shadow: 0 20px 54px rgba(26, 27, 72, 0.1);
+}

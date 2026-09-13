@@ -18,18 +18,17 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="NovaAI" />
-    <meta property="og:image" content="Images/novaai-dashboard.svg" />
+    <meta property="og:image" content="assets/images/novaai-dashboard.svg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
       content="NovaAI - AI automation for modern teams"
     />
     <meta
-    
       name="twitter:description"
       content="An elegant AI workspace for automation, insights, and growth."
     />
-    <meta name="twitter:image" content="Images/novaai-dashboard.svg" />
+    <meta name="twitter:image" content="assets/images/novaai-dashboard.svg" />
     <title>NovaAI - AI automation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -37,7 +36,9 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
   </head>
   <body>
     <!-- Accessibility: Skip navigation link -->
@@ -113,7 +114,9 @@
                 >Explore features</a
               >
             </div>
-            <p class="hero-trust-note">No credit card required • 14-day free trial</p>
+            <p class="hero-trust-note">
+              No credit card required • 14-day free trial
+            </p>
             <div class="proof-points">
               <div><strong>50K+</strong><span>active users</span></div>
               <div><strong>4.9/5</strong><span>customer rating</span></div>
@@ -123,7 +126,7 @@
           <div class="product-preview">
             <!-- Lightweight local product preview tailored to NovaAI's workflow platform. -->
             <img
-              src="./assets/novaai-dashboard.svg"
+              src="./assets/images/novaai-dashboard.svg"
               width="1536"
               height="1024"
               fetchpriority="high"
@@ -316,7 +319,10 @@
                 Choose Starter
               </button>
             </article>
-            <article class="price-card price-card--featured" data-plan-card="professional">
+            <article
+              class="price-card price-card--featured"
+              data-plan-card="professional"
+            >
               <span class="popular">Best value</span>
               <div class="plan-label plan-label--featured">Most popular</div>
               <h3>Professional</h3>
@@ -493,7 +499,7 @@
 
     <!-- ========== FOOTER ========== -->
     <!-- Professional footer -->
-    <footer>
+    <footer id="contact">
       <div class="container footer-grid">
         <div>
           <a class="brand" href="#home">Nova<span>AI</span></a>
@@ -531,7 +537,9 @@
             target="_blank"
             rel="noopener noreferrer"
             ><svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M6.2 8.3H2.7V21h3.5V8.3ZM4.5 2.7A2.1 2.1 0 1 0 4.5 7a2.1 2.1 0 0 0 0-4.3ZM21.3 13.7c0-3.8-2-5.6-4.8-5.6-2.2 0-3.2 1.2-3.8 2v-1.8H9.2V21h3.5v-6.3c0-1.7.3-3.3 2.4-3.3 2.1 0 2.1 2 2.1 3.4V21h3.5v-7.3Z" />
+              <path
+                d="M6.2 8.3H2.7V21h3.5V8.3ZM4.5 2.7A2.1 2.1 0 1 0 4.5 7a2.1 2.1 0 0 0 0-4.3ZM21.3 13.7c0-3.8-2-5.6-4.8-5.6-2.2 0-3.2 1.2-3.8 2v-1.8H9.2V21h3.5v-6.3c0-1.7.3-3.3 2.4-3.3 2.1 0 2.1 2 2.1 3.4V21h3.5v-7.3Z"
+              />
             </svg>
             LinkedIn profile</a
           >
@@ -659,16 +667,28 @@
         <div class="auth-view" data-view="forgot" hidden>
           <p class="eyebrow">Password recovery</p>
           <h2>Reset your password</h2>
-          <p class="auth-intro">Enter your account email to receive a temporary verification code.</p>
+          <p class="auth-intro">
+            Enter your account email to receive a temporary verification code.
+          </p>
           <form id="forgotForm" novalidate>
             <label for="forgotEmail">Email address</label>
-            <input id="forgotEmail" type="email" autocomplete="email" placeholder="you@example.com" required />
+            <input
+              id="forgotEmail"
+              type="email"
+              autocomplete="email"
+              placeholder="you@example.com"
+              required
+            />
             <output class="form-message" aria-live="polite"></output>
-            <button class="button button--block" type="submit">Send verification code</button>
+            <button class="button button--block" type="submit">
+              Send verification code
+            </button>
           </form>
           <p class="auth-links">
             <span aria-hidden="true">&middot;</span>
-            <button type="button" data-auth-view="login">Back to sign in</button>
+            <button type="button" data-auth-view="login">
+              Back to sign in
+            </button>
           </p>
         </div>
         <div class="auth-view" data-view="reset" hidden>
@@ -677,19 +697,48 @@
           <p id="resetCodeHint" class="auth-intro"></p>
           <form id="resetForm" novalidate>
             <label for="resetCode">Verification code</label>
-            <input id="resetCode" type="text" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" maxlength="6" placeholder="6-digit code" required />
+            <input
+              id="resetCode"
+              type="text"
+              inputmode="numeric"
+              autocomplete="one-time-code"
+              pattern="[0-9]{6}"
+              maxlength="6"
+              placeholder="6-digit code"
+              required
+            />
             <label for="resetPassword">New password</label>
             <div class="password-field">
-              <input id="resetPassword" type="password" autocomplete="new-password" minlength="8" placeholder="At least 8 characters" required />
-              <button type="button" class="password-toggle" aria-label="Show password" aria-pressed="false">Show</button>
+              <input
+                id="resetPassword"
+                type="password"
+                autocomplete="new-password"
+                minlength="8"
+                placeholder="At least 8 characters"
+                required
+              />
+              <button
+                type="button"
+                class="password-toggle"
+                aria-label="Show password"
+                aria-pressed="false"
+              >
+                Show
+              </button>
             </div>
             <output class="form-message" aria-live="polite"></output>
-            <button class="button button--block" type="submit">Update password</button>
+            <button class="button button--block" type="submit">
+              Update password
+            </button>
           </form>
           <p class="auth-links">
-            <button type="button" data-auth-view="forgot">Use a different email</button>
+            <button type="button" data-auth-view="forgot">
+              Use a different email
+            </button>
             <span aria-hidden="true">&middot;</span>
-            <button type="button" data-auth-view="login">Back to sign in</button>
+            <button type="button" data-auth-view="login">
+              Back to sign in
+            </button>
           </p>
         </div>
       </div>
@@ -706,10 +755,20 @@
     >
       <div class="modal-backdrop" data-close-checkout></div>
       <div class="auth-dialog checkout-dialog">
-        <button class="modal-close" type="button" aria-label="Close checkout" data-close-checkout>&times;</button>
+        <button
+          class="modal-close"
+          type="button"
+          aria-label="Close checkout"
+          data-close-checkout
+        >
+          &times;
+        </button>
         <p class="eyebrow">Demo checkout</p>
         <h2 id="checkoutTitle">Start Professional</h2>
-        <p class="auth-intro">Set up your 14-day trial. Demo card details stay in your browser and are never charged.</p>
+        <p class="auth-intro">
+          Set up your 14-day trial. Demo card details stay in your browser and
+          are never charged.
+        </p>
         <div class="card-preview" aria-hidden="true">
           <div>
             <span id="cardBrand">Debit</span>
@@ -721,30 +780,81 @@
           </div>
         </div>
         <div class="checkout-summary">
-          <div><span id="checkoutPlanName">Professional plan</span><strong id="checkoutPrice">$49 <small>/ month</small></strong></div>
-          <ul id="checkoutFeatures"><li>Unlimited projects</li><li>AI automation</li><li>Priority support</li></ul>
+          <div>
+            <span id="checkoutPlanName">Professional plan</span
+            ><strong id="checkoutPrice">$49 <small>/ month</small></strong>
+          </div>
+          <ul id="checkoutFeatures">
+            <li>Unlimited projects</li>
+            <li>AI automation</li>
+            <li>Priority support</li>
+          </ul>
         </div>
         <form id="checkoutForm" novalidate>
           <label for="checkoutName">Full name</label>
           <input id="checkoutName" type="text" autocomplete="name" required />
           <label for="checkoutEmail">Email address</label>
-          <input id="checkoutEmail" type="email" autocomplete="email" required />
-          <label for="checkoutCard">Debit card number <span>(demo)</span></label>
-          <input id="checkoutCard" type="text" inputmode="numeric" autocomplete="cc-number" placeholder="4242 4242 4242 4242" minlength="19" maxlength="19" required />
+          <input
+            id="checkoutEmail"
+            type="email"
+            autocomplete="email"
+            required
+          />
+          <label for="checkoutCard"
+            >Debit card number <span>(demo)</span></label
+          >
+          <input
+            id="checkoutCard"
+            type="text"
+            inputmode="numeric"
+            autocomplete="cc-number"
+            placeholder="4242 4242 4242 4242"
+            minlength="19"
+            maxlength="19"
+            required
+          />
           <div class="checkout-fields">
             <div>
               <label for="checkoutExpiry">Expiry</label>
-              <input id="checkoutExpiry" type="text" inputmode="numeric" autocomplete="cc-exp" placeholder="MM/YY" minlength="5" maxlength="5" required />
+              <input
+                id="checkoutExpiry"
+                type="text"
+                inputmode="numeric"
+                autocomplete="cc-exp"
+                placeholder="MM/YY"
+                minlength="5"
+                maxlength="5"
+                required
+              />
             </div>
             <div>
               <label for="checkoutCvc">CVC</label>
-              <input id="checkoutCvc" type="text" inputmode="numeric" autocomplete="cc-csc" placeholder="123" minlength="3" maxlength="4" required />
+              <input
+                id="checkoutCvc"
+                type="text"
+                inputmode="numeric"
+                autocomplete="cc-csc"
+                placeholder="123"
+                minlength="3"
+                maxlength="4"
+                required
+              />
             </div>
           </div>
           <label for="checkoutZip">Billing ZIP / postal code</label>
-          <input id="checkoutZip" type="text" autocomplete="postal-code" placeholder="10001" minlength="4" maxlength="10" required />
+          <input
+            id="checkoutZip"
+            type="text"
+            autocomplete="postal-code"
+            placeholder="10001"
+            minlength="4"
+            maxlength="10"
+            required
+          />
           <output class="form-message" aria-live="polite"></output>
-          <button class="button button--block" type="submit">Start 14-day trial</button>
+          <button class="button button--block" type="submit">
+            Start 14-day trial
+          </button>
         </form>
       </div>
     </div>
@@ -760,31 +870,69 @@
         aria-expanded="false"
       >
         <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M20 11.5a7.5 7.5 0 0 1-8 7.5 8.8 8.8 0 0 1-3.5-.7L4 20l1.5-4A7.2 7.2 0 0 1 4 11.5 7.5 7.5 0 0 1 12 4a7.5 7.5 0 0 1 8 7.5Z" />
+          <path
+            d="M20 11.5a7.5 7.5 0 0 1-8 7.5 8.8 8.8 0 0 1-3.5-.7L4 20l1.5-4A7.2 7.2 0 0 1 4 11.5 7.5 7.5 0 0 1 12 4a7.5 7.5 0 0 1 8 7.5Z"
+          />
           <path d="M8 12h.01M12 12h.01M16 12h.01" />
         </svg>
         <span>Ask NovaAI</span>
       </button>
-      <section id="chatPanel" class="chat-panel" aria-label="NovaAI assistant" hidden>
+      <section
+        id="chatPanel"
+        class="chat-panel"
+        aria-label="NovaAI assistant"
+        hidden
+      >
         <header class="chat-header">
-          <div><span class="chat-status"></span><strong>NovaAI Assistant</strong><small>Typically replies instantly</small></div>
-          <button id="chatClose" type="button" aria-label="Close chat">&times;</button>
+          <div>
+            <span class="chat-status"></span><strong>NovaAI Assistant</strong
+            ><small>Typically replies instantly</small>
+          </div>
+          <button id="chatClose" type="button" aria-label="Close chat">
+            &times;
+          </button>
         </header>
-        <div id="chatMessages" class="chat-messages" role="log" aria-live="polite"></div>
-        <div id="quickReplies" class="quick-replies" aria-label="Suggested questions">
-          <button type="button">What is NovaAI?</button><button type="button">Features</button><button type="button">Pricing</button><button type="button">How does it work?</button><button type="button">Contact</button>
+        <div
+          id="chatMessages"
+          class="chat-messages"
+          role="log"
+          aria-live="polite"
+        ></div>
+        <div
+          id="quickReplies"
+          class="quick-replies"
+          aria-label="Suggested questions"
+        >
+          <button type="button">What is NovaAI?</button
+          ><button type="button">Features</button
+          ><button type="button">Pricing</button
+          ><button type="button">How does it work?</button
+          ><button type="button">Contact</button>
         </div>
         <form id="chatForm" class="chat-form">
           <label class="sr-only" for="chatInput">Your message</label>
-          <input id="chatInput" type="text" maxlength="280" placeholder="Ask anything..." autocomplete="off" required />
+          <input
+            id="chatInput"
+            type="text"
+            maxlength="280"
+            placeholder="Ask anything..."
+            autocomplete="off"
+            required
+          />
           <button type="submit" aria-label="Send message">&rarr;</button>
         </form>
-        <button id="clearChat" class="clear-chat" type="button">Clear chat</button>
+        <button id="clearChat" class="clear-chat" type="button">
+          Clear chat
+        </button>
       </section>
     </aside>
 
     <!-- Notifications & Scripts -->
     <div id="toast" class="toast" role="status" aria-live="polite"></div>
-    <script src="script.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/auth.js" defer></script>
+    <script src="js/pricing.js" defer></script>
+    <script src="js/checkout.js" defer></script>
+    <script src="js/chatbot.js" defer></script>
   </body>
 </html>

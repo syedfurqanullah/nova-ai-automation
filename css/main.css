@@ -1,23 +1,6 @@
 /* ==============================
-   1. DESIGN TOKENS & BASE RESET
+   1. BASE RESET & GLOBAL DEFAULTS
    ============================== */
-:root {
-  /* Color palette */
-  --ink: #15172c;
-  --muted: #626981;
-  --brand: #635bff;
-  --brand-deep: #4841d4;
-  --soft: #f8f8fd;
-  --line: #e7e7f1;
-  --surface: #ffffff;
-
-  /* Layout & dimensions */
-  --container: 1160px;
-  --radius: 22px;
-
-  /* Effects */
-  --shadow: 0 20px 54px rgba(26, 27, 72, 0.1);
-}
 * {
   box-sizing: border-box;
 }
@@ -81,6 +64,7 @@ img {
 /* ==============================
    2. NAVIGATION & HEADER
    ============================== */
+/* Sticky header, desktop navigation, and primary account actions. */
 .site-header {
   position: sticky;
   z-index: 100;
@@ -226,8 +210,9 @@ img {
 }
 
 /* ==============================
-   3. HERO, LOGO STRIP & LANDING HERO
+   3. HERO & SOCIAL PROOF
    ============================== */
+/* Hero copy, product preview, and decorative background effects. */
 .hero {
   position: relative;
   isolation: isolate;
@@ -372,6 +357,7 @@ img {
 .growth-card strong {
   font-size: 17px;
 }
+/* Customer-logo strip directly below the hero. */
 .logo-strip {
   border-bottom: 1px solid var(--line);
 }
@@ -396,8 +382,9 @@ img {
 }
 
 /* ==============================
-   4. FEATURES, PRICING & SHARED CARDS
+   4. SHARED SECTIONS, FEATURES & CARDS
    ============================== */
+/* Reusable content-section spacing and heading treatment. */
 .section {
   padding: 108px 0;
 }
@@ -429,6 +416,7 @@ img {
   color: var(--brand);
   font-weight: 700;
 }
+/* Shared grid foundations for feature, pricing, and testimonial cards. */
 .feature-grid,
 .pricing-grid,
 .testimonial-grid {
@@ -496,6 +484,7 @@ img {
   font-size: 14px;
   font-weight: 700;
 }
+/* Product adoption metrics band. */
 .metrics {
   color: #fff;
   background: linear-gradient(115deg, #4845ba, #706ff1);
@@ -519,8 +508,9 @@ img {
 }
 
 /* ==============================
-   5. PROCESS STEPS, PRICING CARDS & TESTIMONIALS
+   5. PROCESS, PRICING & TESTIMONIALS
    ============================== */
+/* Three-step product onboarding timeline. */
 .process {
   position: relative;
   display: grid;
@@ -563,6 +553,7 @@ img {
   margin: 0;
   color: var(--muted);
 }
+/* Subscription plan cards and billing controls. */
 .price-card {
   position: relative;
   display: flex;
@@ -690,6 +681,7 @@ img {
 .price-card .button {
   margin-top: auto;
 }
+/* Customer testimonials and reviewer details. */
 .testimonial-grid figure {
   padding: 30px;
   margin: 0;
@@ -740,6 +732,7 @@ img {
 /* ==============================
    6. FAQ, FOOTER & FINAL CTA
    ============================== */
+/* FAQ accordion and its supporting copy. */
 .faq-layout {
   display: grid;
   grid-template-columns: 0.78fr 1.22fr;
@@ -784,6 +777,7 @@ img {
   color: var(--muted);
   font-size: 14px;
 }
+/* Full-width call to action before the footer. */
 .final-cta {
   position: relative;
   overflow: hidden;
@@ -807,6 +801,7 @@ img {
   color: #e8e8ff;
   font-size: 17px;
 }
+/* Footer navigation, creator links, and copyright row. */
 footer {
   padding-top: 68px;
   color: #c8cad8;
@@ -869,6 +864,7 @@ footer {
 /* ==============================
    7. AUTHENTICATION & MODALS
    ============================== */
+/* Authentication dialog, form feedback, and modal backdrop. */
 .auth-modal {
   position: fixed;
   z-index: 1000;
@@ -1016,237 +1012,9 @@ footer {
 }
 
 /* ==============================
-   8. RESPONSIVE DESIGN & MOBILE
-   ============================== */
-@media (max-width: 1050px) {
-  .pricing-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 900px) {
-  .hero {
-    padding: 78px 0 66px;
-  }
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 52px;
-  }
-  .hero-copy {
-    max-width: 680px;
-    margin: auto;
-    text-align: center;
-  }
-  .hero-description {
-    margin-inline: auto;
-  }
-  .hero-actions,
-  .proof-points {
-    justify-content: center;
-  }
-  .product-preview {
-    max-width: 650px;
-    margin: auto;
-  }
-  .feature-grid,
-  .testimonial-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .feature-card:last-child {
-    grid-column: 1 / -1;
-  }
-  .price-card {
-    padding-inline: 23px;
-  }
-  .faq-layout {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-  .section-heading--left {
-    margin-bottom: 30px;
-  }
-  .footer-grid {
-    grid-template-columns: 1.4fr 1fr 1fr;
-  }
-  .footer-grid > div:last-child {
-    grid-column: 1 / -1;
-    max-width: 350px;
-  }
-}
-@media (max-width: 620px) {
-  .container {
-    width: min(var(--container), calc(100% - 32px));
-  }
-  .mobile-cta-bar {
-    display: none !important;
-    bottom: 12px;
-  }
-  .navigation {
-    min-height: 67px;
-  }
-  .menu-button {
-    display: block;
-    z-index: 2;
-    margin-left: auto;
-  }
-  .chat-widget {
-    right: 16px;
-    bottom: 24px;
-  }
-  .chat-toggle {
-    width: 52px;
-    min-height: 52px;
-    justify-content: center;
-    padding: 0;
-  }
-  .chat-toggle span {
-    display: none;
-  }
-  .chat-panel {
-    right: 0;
-    bottom: 66px;
-  }
-  .nav-menu {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    left: 0;
-    display: grid;
-    gap: 21px;
-    padding: 23px 16px 25px;
-    background: rgba(255, 255, 255, 0.98);
-    border-bottom: 1px solid var(--line);
-    box-shadow: 0 14px 22px rgba(24, 26, 63, 0.07);
-    transform: translateY(-10px);
-    visibility: hidden;
-    opacity: 0;
-    transition: 0.2s;
-  }
-  .nav-menu.is-open {
-    transform: none;
-    visibility: visible;
-    opacity: 1;
-  }
-  .menu-button[aria-expanded="true"] span:first-child {
-    transform: translateY(6px) rotate(45deg);
-  }
-  .menu-button[aria-expanded="true"] span:nth-child(2) {
-    opacity: 0;
-  }
-  .menu-button[aria-expanded="true"] span:last-child {
-    transform: translateY(-6px) rotate(-45deg);
-  }
-  .nav-menu ul {
-    display: grid;
-    gap: 3px;
-    margin: 0;
-  }
-  .nav-menu li a {
-    display: block;
-    padding: 10px 2px;
-  }
-  .nav-actions {
-    justify-content: space-between;
-    padding-top: 14px;
-    border-top: 1px solid var(--line);
-  }
-  .hero h1 {
-    font-size: 42px;
-  }
-  .logo-strip .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 13px;
-    padding: 25px 0;
-    text-align: center;
-    font-size: 17px;
-  }
-  .logo-strip small {
-    grid-column: 1 / -1;
-  }
-  .section {
-    padding: 76px 0;
-  }
-  .section-heading {
-    margin-bottom: 38px;
-  }
-  .feature-grid,
-  .pricing-grid,
-  .testimonial-grid {
-    grid-template-columns: 1fr;
-  }
-  .feature-card:last-child {
-    grid-column: auto;
-  }
-  .feature-card p,
-  .testimonial-grid blockquote {
-    min-height: auto;
-  }
-  .metrics .container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 28px 12px;
-    padding: 38px 0;
-  }
-  .metrics strong {
-    font-size: 35px;
-  }
-  .process {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-  .process::before {
-    top: 24px;
-    bottom: 24px;
-    left: 27px;
-    right: auto;
-    width: 1px;
-    height: auto;
-  }
-  .process li {
-    display: grid;
-    grid-template-columns: 56px 1fr;
-    column-gap: 19px;
-  }
-  .process li > span {
-    grid-row: span 2;
-    margin: 0;
-  }
-  .process h3 {
-    align-self: end;
-    margin-bottom: 3px;
-  }
-  .process p {
-    grid-column: 2;
-  }
-  .pricing-grid {
-    gap: 28px;
-  }
-  .price-card {
-    padding: 34px 29px 29px;
-  }
-  .footer-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 29px;
-  }
-  .footer-grid > div:first-child,
-  .footer-grid > div:last-child {
-    grid-column: 1 / -1;
-  }
-  .footer-bottom {
-    gap: 15px;
-    margin-top: 36px;
-  }
-  .growth-card {
-    bottom: 16px;
-    left: -8px;
-  }
-  .auth-dialog {
-    padding: 30px 22px 24px;
-  }
-}
-
-/* ==============================
-   9. CHAT WIDGET, CHECKOUT & SESSION CONTROLS
+   8. CHAT WIDGET, CHECKOUT & SESSION CONTROLS
    ===================================== */
+/* Signed-in account label, chat widget, and checkout interface. */
 .account-status {
   max-width: 148px;
   overflow: hidden;
@@ -1615,83 +1383,11 @@ body.dark-theme .checkout-summary {
 body.dark-theme .checkout-summary ul {
   border-color: #4a4972;
 }
-@media (max-width: 620px) {
-  .account-status {
-    display: none;
-  }
-  .chat-widget {
-    right: 16px;
-    bottom: 16px;
-  }
-  .chat-toggle span {
-    display: none;
-  }
-  .chat-toggle {
-    width: 52px;
-    min-height: 52px;
-    justify-content: center;
-    padding: 0;
-  }
-  .chat-panel {
-    right: 0;
-    bottom: 66px;
-  }
-  .chat-messages {
-    min-height: 220px;
-    max-height: min(330px, 42vh);
-  }
-  .checkout-fields {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-  .card-preview {
-    min-height: 138px;
-  }
-  .card-preview strong {
-    font-size: 17px;
-  }
-}
-@media (max-width: 390px) {
-  .hero h1 {
-    font-size: 36px;
-  }
-  .proof-points {
-    gap: 17px;
-  }
-  .proof-points strong {
-    font-size: 18px;
-  }
-  .proof-points span {
-    font-size: 11px;
-  }
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-  .footer-bottom {
-    flex-direction: column;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    scroll-behavior: auto !important;
-    transition-duration: 0.01ms !important;
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-  }
-}
 
 /* ==============================
-   10. THEME CONTROLS & ENHANCEMENTS
+   9. THEME CONTROLS & DARK-MODE SURFACES
    ============================== */
-.navigation {
-  min-height: 76px;
-  gap: 30px;
-}
-.nav-menu ul {
-  gap: 30px;
-}
+/* Theme toggle control and dark-mode visual overrides. */
 .theme-toggle {
   display: grid;
   place-items: center;
@@ -1717,9 +1413,6 @@ body.dark-theme .checkout-summary ul {
   stroke-width: 1.8;
   stroke-linecap: round;
   stroke-linejoin: round;
-}
-.feature-icon {
-  font-size: 0;
 }
 .feature-icon svg {
   width: 24px;
@@ -1756,9 +1449,6 @@ body.dark-theme .checkout-summary ul {
   color: #16835a;
   font-size: 11px;
 }
-.testimonial-grid figcaption > span {
-  display: none;
-}
 .testimonial-grid figcaption img {
   width: 44px;
   height: 44px;
@@ -1776,7 +1466,7 @@ body.dark-theme .checkout-summary ul {
   color: var(--brand);
 }
 
-/* Dark mode intentionally overrides every light surface used by the page. */
+/* Dark-theme surfaces override their corresponding light components. */
 body.dark-theme {
   --ink: #f5f4ff;
   --muted: #b4b4c9;
@@ -1865,31 +1555,14 @@ body.dark-theme .auth-links,
 body.dark-theme .auth-dialog h2 {
   color: #f5f4ff;
 }
-@media (max-width: 700px) {
-  .navigation {
-    min-height: 70px;
-  }
-  .nav-menu ul {
-    gap: 3px;
-  }
-  .theme-toggle {
-    width: 35px;
-    height: 35px;
-  }
-  .nav-actions {
-    gap: 12px;
-  }
-  body.dark-theme .nav-menu {
-    background: #1b1a31;
-  }
-}
 
 /* ==============================
-   11. POLISH, ANIMATIONS & VISUAL REFINEMENTS
+   10. VISUAL POLISH, ANIMATIONS & REFINEMENTS
    ============================== */
 body {
   letter-spacing: -0.01em;
 }
+/* Final visual refinements: elevated header, textured hero, and card motion. */
 .site-header {
   box-shadow: 0 1px 0 rgba(24, 26, 63, 0.02);
 }
@@ -2058,32 +1731,4 @@ body.dark-theme .price-card,
 body.dark-theme .testimonial-grid figure,
 body.dark-theme .faq-list details {
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
-}
-@media (max-width: 900px) {
-  .hero {
-    min-height: 0;
-    padding-top: 88px;
-  }
-  .product-preview {
-    aspect-ratio: 1.5 / 1;
-  }
-}
-@media (max-width: 620px) {
-  .hero {
-    padding-top: 72px;
-    background-size:
-      34px 34px,
-      34px 34px,
-      auto;
-  }
-  .hero h1 {
-    font-size: 43px;
-  }
-  .price-card--featured,
-  .price-card--featured:hover {
-    transform: none;
-  }
-  .product-preview {
-    aspect-ratio: 1.5 / 1;
-  }
 }
